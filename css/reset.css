@@ -1,0 +1,144 @@
+
+html {}
+
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+input,
+p,
+blockquote,
+th,
+td {
+
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5 {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #333;
+	font-family: "sy-r";
+	font-size: 14px;
+	width: 100%;
+	height: 100%;
+}
+html{
+	font-size: 14px;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+table {
+	border-collapse: collapse;
+}
+
+fieldset,
+img {
+	border: 0 none;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset p {
+	margin: 0;
+	padding: 0 0 0 8px;
+}
+
+legend {
+	display: none;
+}
+
+address,
+caption,
+em,
+strong,
+th,
+i {
+	font-style: normal;
+}
+
+
+
+
+ol,
+ul {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+s {
+	text-decoration: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+	content: '';
+}
+
+
+
+
+li {
+	list-style: none;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: ' ';
+	clear: both;
+	height: 0;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+
+.omg {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+

@@ -1,0 +1,51 @@
+.index {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.index #container {
+  width: 100%;
+  height: 100%;
+}
+.index .main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.index .top {
+  background: url(../images/top.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.15rem 0.5rem;
+}
+.index .top > div {
+  float: left;
+  width: 20%;
+  font-size: 0.15rem;
+}
+.index .top .c {
+  width: 60%;
+  text-align: center;
+  font-size: 0.4rem;
+}
+.index .top .r {
+  float: right;
+  text-align: right;
+}
+.index .box {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 0.15rem;
+}
+.index .top_two {
+  padding: 20px;
+}
+.index .top_two > div {
+  float: left;
+  width: 20%;
+}
