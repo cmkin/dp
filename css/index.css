@@ -1,19 +1,14 @@
 .index {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.index #container {
-  width: 100%;
-  height: 100%;
-}
-.index .main {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 100;
+}
+.index #container {
+  width: 100%;
+  height: 100%;
 }
 .index .top {
   background: url(../images/top.png) no-repeat 0 0;
@@ -203,10 +198,11 @@
 }
 .index .bottom ul li {
   float: left;
-  width: 25%;
+  width: 29%;
+  box-sizing: border-box;
   margin-right: 1%;
 }
-.index .bottom ul li > div.cvs {
+.index .bottom ul li .cvs {
   height: 2.5rem;
 }
 .index .bottom ul li p {
@@ -230,4 +226,47 @@
   text-align: center;
   font-size: 0.36rem;
   padding-bottom: 0.2rem;
+}
+.index .bottom ul .pc {
+  width: 20%;
+}
+.index .bottom ul .fb {
+  width: 30%;
+  margin-right: 0;
+  position: relative;
+}
+.index .bottom ul .fb p i {
+  background-color: #3565B8;
+}
+.index .bottom ul .fb ul {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+.index .bottom ul .bj p i {
+  background-color: #20C5D8;
+}
+.index .bottom ul:last-child {
+  margin-top: 20px;
+}
+.index .bottom ul:last-child li .cvs2 {
+  height: 1.6rem;
+  width: 100%;
+}
+.index .bottom ul:last-child .bj > div > .cvs2 {
+  float: left;
+  width: 50%;
+}
+.index .bottom ul:last-child .qs {
+  width: 39%;
+}
+.index .bottom ul:last-child .qs p i {
+  background-color: #20C5D8;
+}
+.index .bottom ul:last-child .lj {
+  width: 30%;
+  margin-right: 0;
+}
+.index .bottom ul:last-child .lj p i {
+  background-color: #3565B8;
 }

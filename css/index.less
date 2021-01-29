@@ -1,18 +1,18 @@
 .index{
 	width: 100%;
 	height: 100%;
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
 	#container{
 		width: 100%;
-		height: 100%;
+		height: 100%; 
 	}
 	.main{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 100;
+		
 	}
 	.top{
 		background: url(../images/top.png) no-repeat 0 0;
@@ -207,9 +207,10 @@
 		ul{
 			li{
 				float: left;
-				width: 25%;
+				width: 29%;
+				box-sizing: border-box;
 				margin-right: 1%;
-				&>div.cvs{
+				.cvs{
 					height: 2.5rem;
 				}
 				p{
@@ -236,6 +237,75 @@
 					font-size: 0.36rem;
 					padding-bottom: 0.20rem;
 				}
+			}
+			.pc{
+				width: 20%;
+			}
+			.fb{
+				width: 30%;
+				margin-right: 0;
+				position: relative;
+				p{
+					i{
+						background-color: #3565B8;
+					}
+				}
+				&>div{
+					
+				}
+				ul{
+					position: absolute;
+					top: 10%;
+					right: 5%;
+					li{
+						i{
+							
+						}
+					}
+				}
+			}
+			
+			.bj{
+				p{
+					i{
+						background-color: #20C5D8;
+					}
+				}
+			}
+		}
+		ul:last-child{
+			margin-top: 20px;
+			li{
+				.cvs2{
+					height: 1.6rem;
+					width: 100%;
+				}
+			}
+			.bj{
+				&>div>.cvs2{
+					float: left;
+					width: 50%;
+				}
+			}
+			.qs{
+				width: 39%;
+				p{
+					i{
+						background-color: #20C5D8;
+					}
+				}
+				.cvs2{
+					//background-color: #ECF5FE;
+				}
+			}
+			.lj{
+				p{
+					i{
+						background-color: #3565B8;
+					}
+				}
+				width: 30%;
+				margin-right: 0;
 			}
 		}
 	}

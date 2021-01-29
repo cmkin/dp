@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="" />
 		<title></title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/map.css">
+		<link rel="stylesheet" href="css/message.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<style>
+
+
+
+		</style>
 	</head>
 	<body>
+		<div id="overlay"></div>
+		<div id='msg'>
+			<div class="loading">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div id="mapDiv"></div>
+		
+		
 		<div class="index">
-			<div id="container"></div>
+			
 			<div class="main">
 				<div class="top clearfix">
 					<div class="l">2012/12/20</div>
@@ -84,6 +104,31 @@
 							<p><i></i>跑一次事项</p>
 							<div class="cvs" id="pc"></div>
 						</li>
+						<li class="fb box">
+							<p><i></i>部门事项分布</p>
+							<div class="cvs" id="fb"></div>
+							<ul>
+								<li></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="clearfix">
+						<li class="bj box">
+							<p><i></i>办件渠道分布</p>
+							<div class="clearfix">
+								<div class="cvs2" id="bw"></div>
+								<div class="cvs2" id="bk"></div>
+							</div>
+							
+						</li>
+						<li class="qs box">
+							<p><i></i>本周部门接件趋势</p>
+							<div class="cvs2" id="qs"></div>
+						</li>
+						<li class="qs lj box">
+							<p><i></i>累计接件趋势</p>
+							<div class="cvs2" id="lj"></div>
+						</li>
 					</ul>
 				</div>
 				
@@ -94,16 +139,13 @@
 			
 		</div>
 		
-
-	</body>
-	<script src="./js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
-	<script src="./js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="https://map.qq.com/api/gljs?v=1.exp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
-	<script src="./js/ie.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-		window.onload = function() {
+		
+		<script src="js/view/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/view/ie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/view/index.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
 			appInit()
-		}
-	</script>
+		</script>
+		<script src="js/libs/require.js" defer async="true" data-main="js/main"></script>
+	</body>
 </html>
