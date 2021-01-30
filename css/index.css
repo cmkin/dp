@@ -203,15 +203,15 @@
   margin-right: 1%;
 }
 .index .bottom ul li .cvs {
-  height: 2.5rem;
+  height: 1.8rem;
 }
 .index .bottom ul li p {
-  font-size: 0.18rem;
+  font-size: 0.15rem;
 }
 .index .bottom ul li p i {
   display: inline-block;
-  width: 0.15rem;
-  height: 0.15rem;
+  width: 0.12rem;
+  height: 0.12rem;
   background-color: #44A1F3;
   border-radius: 50%;
   margin-right: 5px;
@@ -224,8 +224,8 @@
 }
 .index .bottom ul .ns div {
   text-align: center;
-  font-size: 0.36rem;
-  padding-bottom: 0.2rem;
+  font-size: 0.28rem;
+  padding-bottom: 0.1rem;
 }
 .index .bottom ul .pc {
   width: 20%;
@@ -247,10 +247,10 @@
   background-color: #20C5D8;
 }
 .index .bottom ul:last-child {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .index .bottom ul:last-child li .cvs2 {
-  height: 1.6rem;
+  height: 1.5rem;
   width: 100%;
 }
 .index .bottom ul:last-child .bj > div > .cvs2 {

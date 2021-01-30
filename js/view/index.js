@@ -2,24 +2,88 @@
 var http = {
 	url:'http://zxbb.zwb.tjbh.gov.cn/JCHnaccForm/Api/Public/',
 	post:function(url,json,success){
-		$.post(http.url+url,json,function(res){
-			success(res)
-		})
+		
+		$.ajax({
+		  type: 'POST',
+		  url: http.url+url,
+		  data: JSON.stringify(json),
+		  success: success,
+		  headers:{
+			  "Content-Type":"application/json"
+		  },
+		  dataType: "json"
+		});
+		
 	}
 }
 
 var main = {
+	data:{
+		list:[]
+	},
 	init: function() {
 		//main.initMap()
 		main.rem(950, 950)
 		main.fw()
-		main.pc()
+		
 		main.fb()
 		main.bw()
 		main.bk()
 		main.qs()
 		main.lj()
-		//http.post()
+		main.http()
+		setInterval(function(){
+			main.http()
+		},1000*60)
+		
+	},
+	http:function(){
+		//7
+		http.post("Index/AllCount.ashx",{},function(res){
+			var obj = res.data
+				$("[data-gw]").text(obj.publicMatter)
+				$("[data-xz]").text(obj.licenseMatter)
+				$("[data-xk]").text(obj.licenseMatter)
+				$("[data-tb]").text(obj.sceneInfoCount)
+				$("[data-yq]").text(obj.cardCount)
+				$("[data-bb]").text(obj.sceneChildCount)
+				
+				main.pc({
+					num:obj.oneCount,
+					bfb:20
+				})
+		})
+		//6
+		http.post("Index/CardCount.ashx",{
+			id:'606D8154F55A5CD7'
+		},function(res){
+			var obj  = res.data
+				
+		})
+		//4
+		http.post("Index/CountApply.ashx",{},function(res){
+			
+		})
+		
+		return
+		http.post("Index/SceneCount.ashx",{
+			id:id
+		},function(res){
+			var obj = res.data
+			
+			
+			$("[data-bb]").text(obj.onlineCount)
+			$("[data-xk]").text(obj.licenseMatter)
+			$("[data-tb]").text(obj.sceneInfoCount)
+			$("[data-yq]").text(obj.cardCount)
+		})
+		http.post("Index/SceneNum.ashx",{},function(res){
+			let obj = res.data
+			return
+				$("[data-gw]").text(obj.publicMatter)
+				$("[data-xz]").text(obj.licenseMatter)
+		})
+		
 	},
 	fw: function() {
 		var myChart = echarts.init(document.getElementById('fw'));
@@ -60,16 +124,16 @@ var main = {
 				type: 'bar',
 				label: {
 					show: true,
-					position: [0, 25],
+					position: [0, 18],
 					formatter: '{b0}:  {c0}',
 					color: "#44A1F3",
-					fontSize: 14
+					fontSize: 12
 				},
 				itemStyle: {
 					borderRadius: 5,
 					color: "#44A1F3"
 				},
-				barWidth: 20,
+				barWidth: 15,
 				showBackground: true,
 				backgroundStyle: {
 					color: "#F0F2F5",
@@ -82,9 +146,9 @@ var main = {
 		// 使用刚指定的配置项和数据显示图表。
 		myChart.setOption(option);
 	},
-	pc: function() {
+	pc: function(obj) {
 		var myChart = echarts.init(document.getElementById('pc'));
-		var e = 80;
+		var e = obj.bfb;
 		// 指定图表的配置项和数据
 		var option = {
 			color: [{
@@ -113,7 +177,7 @@ var main = {
 					left: 'center',
 					top: '40%',
 					style: {
-						text: '24777',
+						text: obj.num,
 						textAlign: 'center',
 						fill: '#666', //文字的颜色
 						width: 30,
@@ -137,7 +201,7 @@ var main = {
 					left: 'center',
 					top: '55%',
 					style: {
-						text: '90.3%',
+						text: obj.bfb+'%',
 						textAlign: 'center',
 						fill: '#666', //文字的颜色
 						width: 30,
@@ -298,17 +362,11 @@ var main = {
 					show: false,
 					position: 'center'
 				},
-				emphasis: {
-					label: {
-						show: true,
-						fontSize: '40',
-						fontWeight: 'bold'
-					}
-				},
+				
 				labelLine: {
 					show: false
 				},
-				center:['50%','45%'],
+				center:['50%','36%'],
 				data: [{
 						value: 1048,
 						name: '搜索引擎'
@@ -346,17 +404,11 @@ var main = {
 					show: false,
 					position: 'center'
 				},
-				emphasis: {
-					label: {
-						show: true,
-						fontSize: '40',
-						fontWeight: 'bold'
-					}
-				},
+				
 				labelLine: {
 					show: false
 				},
-				center:['50%','45%'],
+				center:['50%','36%'],
 				data: [{
 						value: 1048,
 						name: '搜索引擎'

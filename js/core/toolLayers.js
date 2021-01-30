@@ -63,7 +63,7 @@ define('toolLayers', ['tmap', 'basetmap', 'jquery', 'd3', 'd3SvgOverlay'],
 					var lays = layerGroup.AreaRange;
 					layerGroup.AreaRange = basemap.getLayerGroup(geoJson.AreaRange, layName, style);
 					//添加弹出信息事件
-					addOpenInfo(layerGroup.AreaRange);
+					//addOpenInfo(layerGroup.AreaRange);
 					
 					setTimeout(function(){
 						
